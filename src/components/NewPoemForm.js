@@ -9,7 +9,7 @@ const [form, setForm] = useState({title: '', content: '', author: ''})
       event.preventDefault()
       let req = await fetch('http://localhost:8004/poems', {
         method: "POST",
-        headers:{'Content-Type': 'applications/json'},
+        headers:{'Content-Type': 'application/json'},
         body:JSON.stringify(form)
       })
         let res = await req.json()
